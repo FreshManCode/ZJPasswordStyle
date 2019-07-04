@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger,ZJPSWTextfieldViewType) {
     ZJPSWTextfieldViewLineEncryption = 1,
     ZJPSWTextfieldViewRectNormal     = 2,
     ZJPSWTextfieldViewRectEncryption = 3,
+    ZJPSWTextfieldViewWithAnimating  = 4,
 };
 
 NS_ASSUME_NONNULL_BEGIN

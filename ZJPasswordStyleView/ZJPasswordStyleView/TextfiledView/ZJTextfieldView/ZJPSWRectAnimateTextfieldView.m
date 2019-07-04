@@ -1,18 +1,22 @@
 //
-//  ZJPSWLineNormalTextfiledView.m
-//  ImitateBaiduCourse
+//  ZJPSWRectAnimateTextfieldView.m
+//  ZJPasswordStyleView
 //
-//  Created by 张君君 on 2019/6/21.
-//  Copyright © 2019年 ZhangJunJun. All rights reserved.
+//  Created by 张君君 on 2019/7/4.
+//  Copyright © 2019年 com.zhangjunjun.com. All rights reserved.
 //
 
-#import "ZJPSWLineNormalTextfiledView.h"
+#import "ZJPSWRectAnimateTextfieldView.h"
+
 #import "ZJPasswordDotView.h"
 #import "ZJMaskView.h"
 #import "ZJBaseTextField.h"
 #import "ZJPasswordViewProtocol.h"
 
-@interface ZJPSWLineNormalTextfiledView ()
+#import "ZJCircleAnimatedView.h"
+#import "ZJSuccessLoadingView.h"
+
+@interface ZJPSWRectAnimateTextfieldView ()
 
 @property (nonatomic, strong) UILabel *titleLab;
 @property (nonatomic, strong) ZJPasswordDotView *dotView;
@@ -20,9 +24,12 @@
 @property (nonatomic, strong) ZJBaseTextField *textField;
 @property (nonatomic, strong) NSMutableArray <ZJPasswordDotView *> *dotViews;
 
+@property (nonatomic, strong) ZJCircleAnimatedView *circleAnimatedView;
+@property (nonatomic, strong) ZJSuccessLoadingView *successCheckView;
+
 @end
 
-@implementation ZJPSWLineNormalTextfiledView
+@implementation ZJPSWRectAnimateTextfieldView
 
 @synthesize delegate = _delegate;
 
@@ -31,15 +38,15 @@
     self.titleLab = CreateCenterAlignmentLabel(Font(16.f), ZJColorWithHex(0x333333));
     [self addSubview:self.titleLab];
     [self.titleLab setText:@"请输入密码"];
-
+    
     _textField = [ZJBaseTextField new];
     _textField.textColor = [UIColor whiteColor];
     _textField.tintColor = [UIColor whiteColor];
+    _textField.secureTextEntry = true;
     _textField.maxCount  = kMaxCount;
     _textField.allowCopyMenu = false;
     _textField.keyboardType = UIKeyboardTypeNumberPad;
     [_textField addTarget:self action:@selector(textfieldDidChanged:) forControlEvents:UIControlEventEditingChanged];
-    
     __weak typeof(self) weakSelf     = self;
     _textField.showToolbarView = true;
     _textField.ToolBarViewEvent = ^{
@@ -49,6 +56,9 @@
     [self addSubview:_textField];
     
     _maskView = [[ZJMaskView alloc] init];
+    _maskView.layer.cornerRadius = 8.f;
+    _maskView.layer.borderColor  = ZJBorderLayerCorlor.CGColor;
+    _maskView.layer.borderWidth  = 1.f;
     [_maskView setBackgroundColor:[UIColor whiteColor]];
     [self addSubview:_maskView];
 }
@@ -79,14 +89,43 @@
     self.dotViews = [[NSMutableArray alloc] initWithCapacity:6];
     CGFloat viewW = frame.size.width / kMaxCount;
     CGFloat viewH = frame.size.height;
-    for (int i = 0; i < 6; i ++) {
+    for (int i = 0; i < kMaxCount; i ++) {
         CGRect frame = CGRectMake(viewW * i , 0, viewW , viewH );
-        ZJPasswordDotView *dotView = [ZJPasswordDotView createDotViewWithType:ZJPasswordBottomLineNormal
+        ZJPasswordDotView *dotView = [ZJPasswordDotView createDotViewWithType:ZJPasswordRectangleEncryption
                                                                         frame:frame];
+        [dotView.verticalLineView setHidden:i == kMaxCount - 1];
         [self.maskView  addSubview:dotView];
         [self.dotViews  addObject:dotView];
     }
     [self updateInputNumWithText:_textField.text];
+    
+    [self addAnimatedView];
+}
+
+- (void)addAnimatedView {
+    [self layoutIfNeeded];
+    
+    __weak typeof(self) weakSelf     = self;
+    
+    self.circleAnimatedView = [[ZJCircleAnimatedView alloc] initWithFrame:self.bounds];
+    [self.circleAnimatedView setHidden:true];
+    
+    self.successCheckView   = [[ZJSuccessLoadingView alloc] initWithFrame:self.bounds];
+    //动画完成了
+    self.successCheckView.ZJSuccessLoadEnd = ^{
+        if (weakSelf.delegate && [weakSelf.delegate
+                                  respondsToSelector:@selector(textfieldView:result:eventType:)]) {
+            [weakSelf.delegate textfieldView:weakSelf
+                                      result:@""
+                                   eventType:ZJPasswordViewAnimateViewFinish];
+        }
+        [weakSelf.circleAnimatedView     setHidden:true];
+        [weakSelf.successCheckView       setHidden:true];
+    };
+    [self.successCheckView setHidden:true];
+    
+    [self addSubview:self.circleAnimatedView];
+    [self addSubview:self.successCheckView];
 }
 
 - (void)textfieldDidChanged:(UITextField *)textfiled {
@@ -95,19 +134,11 @@
 
 - (void)updateInputNumWithText:(NSString *)text {
     NSInteger length = text.length;
-    const char *textChar = text.UTF8String;
-    //更新下划线状态
     [self.dotViews enumerateObjectsUsingBlock:^(ZJPasswordDotView * obj, NSUInteger idx, BOOL * stop) {
         if (length < kMaxCount) {
             [obj setDotBottomLineHightlight:idx == length];
         }
-        //更新输入的内容
-        if (idx < length) {
-            NSString *text_string = [NSString stringWithFormat:@"%c",textChar[idx]];
-            [obj setDotTitle:text_string];
-        } else {
-            [obj setDotTitle:@""];
-        }
+        [obj setDotPointHide:!(idx < length)];
     }];
     if (length == kMaxCount) {
         [self callBackAutoDoneFunnctionWithText:text];
@@ -116,11 +147,21 @@
         [self callBackInpuTextLengthUpdateWithText:text];
     }
 }
-- (void)callOkButtonFunnctionWithText:(NSString *)text {
-    [self makeTextfieldResignFirstResponder];
-    if (_delegate && [_delegate respondsToSelector:@selector(textfieldView:result:eventType:)]) {
-        [_delegate textfieldView:self result:text eventType:ZJPasswordViewEventOKButton];
-    }
+
+
+- (void)showCircleAnimating {
+    [self.circleAnimatedView setHidden:false];
+    [self.circleAnimatedView beginAnimating];
+}
+
+- (void)stopCircleAnimating {
+    [self.circleAnimatedView endAnimating];
+    [self.circleAnimatedView setHidden:true];
+}
+
+- (void)showCheckAnimation {
+    [self.successCheckView setHidden:false];
+    [self.successCheckView beginAnimating];
 }
 
 - (void)callBackAutoDoneFunnctionWithText:(NSString *)text {
@@ -132,6 +173,13 @@
 - (void)callBackInpuTextLengthUpdateWithText:(NSString *)text {
     if (_delegate && [_delegate respondsToSelector:@selector(textfieldView:result:eventType:)]) {
         [_delegate textfieldView:self result:text eventType:ZJPasswordViewEventLengthUpdate];
+    }
+}
+
+- (void)callOkButtonFunnctionWithText:(NSString *)text {
+    [self makeTextfieldResignFirstResponder];
+    if (_delegate && [_delegate respondsToSelector:@selector(textfieldView:result:eventType:)]) {
+        [_delegate textfieldView:self result:text eventType:ZJPasswordViewEventOKButton];
     }
 }
 
@@ -150,17 +198,12 @@
 
 - (void)autoShowKeyboardDelay:(NSTimeInterval)delay {
     ZJAfter(delay, ^{
-        [self.textField becomeFirstResponder];
+        [_textField becomeFirstResponder];
     });
 }
-
-
-
 - (NSInteger)textLength {
     return _textField.text.length;
 }
 
-
-
-
 @end
+

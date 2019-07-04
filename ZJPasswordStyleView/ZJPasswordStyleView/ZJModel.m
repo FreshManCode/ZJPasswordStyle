@@ -48,7 +48,7 @@
 }
 
 - (void)configureDefaultData {
-    for (int i = 0 ; i < 4; i++) {
+    for (int i = 0 ; i < 5; i++) {
         ZJModel *model = [ZJModel new];
         if (i == 0) {
             model.name = @"下划线高亮明文密码输入框样式";
@@ -65,6 +65,10 @@
         else if (i == 3) {
             model.name = @"矩形框安全密码输入框样式";
             model.styleType = ZJPasswordStyleRectangleEncrypt;
+        }
+        else if (i == 4) {
+            model.name = @"密码密码框带完成动画";
+            model.styleType = ZJPasswordStyleWithAnimating;
         }
         [self.rows addObject:model];
     }

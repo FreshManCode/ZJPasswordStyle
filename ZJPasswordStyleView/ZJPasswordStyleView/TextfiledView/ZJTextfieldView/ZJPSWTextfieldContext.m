@@ -11,6 +11,7 @@
 #import "ZJPSWLineEncryptTextfiledView.h"
 #import "ZJPSWRectEncryptTextfiledView.h"
 #import "ZJPSWRectNormalTextfieldView.h"
+#import "ZJPSWRectAnimateTextfieldView.h"
 
 
 @interface ZJPSWTextfieldContext ()
@@ -38,7 +39,6 @@
         case ZJPSWTextfieldViewLineEncryption: {
             self.textfiledView = [[ZJPSWLineEncryptTextfiledView alloc] initWithFrame:frame];
         }
-            
             break;
         case ZJPSWTextfieldViewRectNormal: {
             self.textfiledView = [[ZJPSWRectNormalTextfieldView alloc]initWithFrame:frame];
@@ -47,7 +47,10 @@
         case ZJPSWTextfieldViewRectEncryption: {
             self.textfiledView = [[ZJPSWRectEncryptTextfiledView alloc] initWithFrame:frame];
         }
-            
+            break;
+        case ZJPSWTextfieldViewWithAnimating: {
+            self.textfiledView = [[ZJPSWRectAnimateTextfieldView alloc] initWithFrame:frame];
+        }
             break;
             
         default:

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF01C86E22CD8F7300CDD1EF /* ZJCircleAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF01C86D22CD8F7300CDD1EF /* ZJCircleAnimatedView.m */; };
+		DF01C87822CDD09200CDD1EF /* ZJSuccessLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF01C87722CDD09200CDD1EF /* ZJSuccessLoadingView.m */; };
+		DF01C87B22CDEAD000CDD1EF /* ZJPSWRectAnimateTextfieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF01C87A22CDEAD000CDD1EF /* ZJPSWRectAnimateTextfieldView.m */; };
 		DFD733BB22C06E81002F1476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD733BA22C06E81002F1476 /* AppDelegate.m */; };
 		DFD733BE22C06E81002F1476 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD733BD22C06E81002F1476 /* ViewController.m */; };
 		DFD733C122C06E81002F1476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD733BF22C06E81002F1476 /* Main.storyboard */; };
@@ -54,6 +57,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF01C86C22CD8F7300CDD1EF /* ZJCircleAnimatedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJCircleAnimatedView.h; sourceTree = "<group>"; };
+		DF01C86D22CD8F7300CDD1EF /* ZJCircleAnimatedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJCircleAnimatedView.m; sourceTree = "<group>"; };
+		DF01C87622CDD09200CDD1EF /* ZJSuccessLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSuccessLoadingView.h; sourceTree = "<group>"; };
+		DF01C87722CDD09200CDD1EF /* ZJSuccessLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSuccessLoadingView.m; sourceTree = "<group>"; };
+		DF01C87922CDEAD000CDD1EF /* ZJPSWRectAnimateTextfieldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJPSWRectAnimateTextfieldView.h; sourceTree = "<group>"; };
+		DF01C87A22CDEAD000CDD1EF /* ZJPSWRectAnimateTextfieldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJPSWRectAnimateTextfieldView.m; sourceTree = "<group>"; };
 		DFD733B622C06E81002F1476 /* ZJPasswordStyleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJPasswordStyleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD733B922C06E81002F1476 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DFD733BA22C06E81002F1476 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -147,6 +156,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF01C86A22CD8E9100CDD1EF /* AnimatedView */ = {
+			isa = PBXGroup;
+			children = (
+				DF01C86C22CD8F7300CDD1EF /* ZJCircleAnimatedView.h */,
+				DF01C86D22CD8F7300CDD1EF /* ZJCircleAnimatedView.m */,
+				DF01C87622CDD09200CDD1EF /* ZJSuccessLoadingView.h */,
+				DF01C87722CDD09200CDD1EF /* ZJSuccessLoadingView.m */,
+			);
+			path = AnimatedView;
+			sourceTree = "<group>";
+		};
 		DFD733AD22C06E81002F1476 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +221,7 @@
 		DFD733E022C06ED7002F1476 /* TextfiledView */ = {
 			isa = PBXGroup;
 			children = (
+				DF01C86A22CD8E9100CDD1EF /* AnimatedView */,
 				DFD733E122C06ED7002F1476 /* ZJDotView */,
 				DFD733EE22C06ED7002F1476 /* ZJPasswordViewProtocol.h */,
 				DFD733EF22C06ED7002F1476 /* ZJTextfieldView */,
@@ -238,6 +259,8 @@
 				DFD733F922C06ED7002F1476 /* ZJPSWRectEncryptTextfiledView.m */,
 				DFD733F622C06ED7002F1476 /* ZJPSWRectNormalTextfieldView.h */,
 				DFD733F122C06ED7002F1476 /* ZJPSWRectNormalTextfieldView.m */,
+				DF01C87922CDEAD000CDD1EF /* ZJPSWRectAnimateTextfieldView.h */,
+				DF01C87A22CDEAD000CDD1EF /* ZJPSWRectAnimateTextfieldView.m */,
 				DFD733F522C06ED7002F1476 /* ZJPSWTextfieldContext.h */,
 				DFD733F022C06ED7002F1476 /* ZJPSWTextfieldContext.m */,
 			);
@@ -418,9 +441,12 @@
 				DFD7343122C06FD6002F1476 /* ZJBaseTextField.m in Sources */,
 				DFD7342522C06F48002F1476 /* MASLayoutConstraint.m in Sources */,
 				DFD7342922C06F48002F1476 /* MASViewConstraint.m in Sources */,
+				DF01C86E22CD8F7300CDD1EF /* ZJCircleAnimatedView.m in Sources */,
+				DF01C87822CDD09200CDD1EF /* ZJSuccessLoadingView.m in Sources */,
 				DFD7340422C06ED7002F1476 /* ZJPSWRectEncryptTextfiledView.m in Sources */,
 				DFD7342622C06F48002F1476 /* NSArray+MASAdditions.m in Sources */,
 				DFD733FC22C06ED7002F1476 /* ZJPasswordDotView.m in Sources */,
+				DF01C87B22CDEAD000CDD1EF /* ZJPSWRectAnimateTextfieldView.m in Sources */,
 				DFD7343A22C09EDE002F1476 /* ZJPasswordStyleViewController.m in Sources */,
 				DFD7342422C06F48002F1476 /* MASConstraintMaker.m in Sources */,
 				DFD7340322C06ED7002F1476 /* ZJPSWLineEncryptTextfiledView.m in Sources */,

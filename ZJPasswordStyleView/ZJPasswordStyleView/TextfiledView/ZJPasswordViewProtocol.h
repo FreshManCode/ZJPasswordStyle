@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger,ZJPasswordViewEventType) {
     ZJPasswordViewEventAutoDone     = 1, //输入密码达到6位
     ZJPasswordViewEventLengthUpdate = 2, //输入密码长度变化
     ZJPasswordViewEventOKButton     = 3, //点击了键盘工具条,使键盘下落
+    ZJPasswordViewAnimateViewFinish = 4, //输入密码动画完成了
 };
 
 
@@ -71,6 +72,15 @@ typedef NS_ENUM(NSInteger,ZJPasswordViewEventType) {
  @return length
  */
 - (NSInteger)textLength;
+
+
+@optional;
+
+- (void)showCircleAnimating;
+
+- (void)stopCircleAnimating;
+
+- (void)showCheckAnimation;
 
 
 @end

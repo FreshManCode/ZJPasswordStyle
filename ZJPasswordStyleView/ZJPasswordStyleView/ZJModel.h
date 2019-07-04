@@ -14,6 +14,8 @@ typedef NS_ENUM(NSInteger,ZJPasswordStyleType) {
     ZJPasswordStyleBottomLineEncrypt = 1, //下划线高亮样式密文
     ZJPasswordStyleRectangleNormal   = 2, //矩形框样式明文
     ZJPasswordStyleRectangleEncrypt  = 3, //矩形框样式密文
+    ZJPasswordStyleWithAnimating     = 4, //带动画的
+    
 };
 
 @interface ZJModel : NSObject
