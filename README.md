@@ -23,6 +23,12 @@
 
 ![](https://github.com/FreshManCode/ImageURL/blob/master/PasswordStyle/%E7%9F%A9%E5%BD%A2%E6%A1%86%E6%98%8E%E6%96%876%E4%BD%8D%E5%AF%86%E7%A0%81.png?raw=true)
 
+* 输入密码之后,具有类似于支付宝提交支付密码的一个过渡提交动画.具体样式如下gif展示:
+
+![](https://github.com/FreshManCode/ZJPasswordStyle/blob/master/%E6%A0%B7%E5%BC%8F%E6%88%AA%E5%9B%BE/PasswordAnimated.gif?raw=true)
+
+*注: *动画的实现参考了这篇博主的实现思路,起初我还以为是图片,后来看到了这个思路恍然大悟.原文的链接如下:[原文地址](https://blog.csdn.net/u013282507/article/details/70208141)
+
 
 如需要自行修改回调逻辑以及相关样式可以参照对应的子类以及**ZJPasswordViewProtocol**这个协议类中,包含了回调的委托方法,以及可以自定义相关样式或者逻辑的TextfieldView应该事先的协议方法.
 
