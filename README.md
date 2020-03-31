@@ -29,9 +29,6 @@
 
 *注: *动画的实现参考了这篇博主的实现思路,起初我还以为是图片,后来看到了这个思路恍然大悟.原文的链接如下:[原文地址](https://blog.csdn.net/u013282507/article/details/70208141)
 
-![](https://gitee.com/yongEagle/GiteeImageURL/raw/master/BlockImage/WXHeadIcon.jpeg)
-
-
 如需要自行修改回调逻辑以及相关样式可以参照对应的子类以及**ZJPasswordViewProtocol**这个协议类中,包含了回调的委托方法,以及可以自定义相关样式或者逻辑的TextfieldView应该事先的协议方法.
 
 下述则是委托方法,包含了目前定义的几种事件类型,以及输入达到6位密码之后的通知.
