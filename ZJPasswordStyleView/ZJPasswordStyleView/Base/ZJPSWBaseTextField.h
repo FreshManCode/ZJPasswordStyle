@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ZJBaseTextField : UITextField
+@interface ZJPSWBaseTextField : UITextField
 
 @property (nonatomic,weak) id <UITextFieldDelegate> pDelegate;
 @property (nonatomic, assign) NSInteger maxCount;

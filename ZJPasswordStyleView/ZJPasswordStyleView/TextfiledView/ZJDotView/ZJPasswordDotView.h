@@ -6,7 +6,7 @@
 //  Copyright © 2019年 ZhangJunJun. All rights reserved.
 //
 
-#import "ZJBaseView.h"
+#import "ZJPSWBaseView.h"
 #import "ZJMaskView.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger,ZJPasswordType) {
     ZJPasswordRectangleEncryption = 3, //矩形框加密样式
 };
 
-@interface ZJPasswordDotView : ZJBaseView
+@interface ZJPasswordDotView : ZJPSWBaseView
 
 @property (nonatomic, strong) UILabel *titleLab;
 @property (nonatomic, strong) UIView *bottomLineView;

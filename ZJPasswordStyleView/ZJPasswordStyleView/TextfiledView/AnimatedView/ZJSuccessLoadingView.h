@@ -6,11 +6,11 @@
 //  Copyright © 2019年 com.zhangjunjun.com. All rights reserved.
 //
 
-#import "ZJBaseView.h"
+#import "ZJPSWBaseView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZJSuccessLoadingView : ZJBaseView
+@interface ZJSuccessLoadingView : ZJPSWBaseView
 
 @property (nonatomic,copy) void (^ZJSuccessLoadEnd)(void);
 

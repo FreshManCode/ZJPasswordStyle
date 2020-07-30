@@ -6,12 +6,12 @@
 //  Copyright © 2019年 ZhangJunJun. All rights reserved.
 //
 
-#import "ZJBaseView.h"
+#import "ZJPSWBaseView.h"
 #import "ZJPasswordViewProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZJPSWRectNormalTextfieldView : ZJBaseView <ZJPasswordViewProtocol>
+@interface ZJPSWRectNormalTextfieldView : ZJPSWBaseView <ZJPasswordViewProtocol>
 
 @end
 

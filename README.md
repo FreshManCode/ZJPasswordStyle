@@ -5,27 +5,28 @@
 
 * 下划线高亮明文输入框样式,如下图
 
-![](https://github.com/FreshManCode/ImageURL/blob/master/PasswordStyle/%E4%B8%8B%E5%88%92%E7%BA%BF%E9%AB%98%E4%BA%AE%E6%98%8E%E6%96%87.png?raw=true)
+![](https://xunpizhangjj.coding.net/p/CodingImageURL/d/CodingImageURL/git/raw/master/PasswordStyle/%E4%B8%8B%E5%88%92%E7%BA%BF%E9%AB%98%E4%BA%AE%E6%98%8E%E6%96%87.png)
+
 
 * 下划线高亮密文样式,如下图:
-![](https://github.com/FreshManCode/ImageURL/blob/master/PasswordStyle/%E4%B8%8B%E5%88%92%E7%BA%BF%E9%AB%98%E4%BA%AE%E5%AF%86%E6%96%87.png?raw=true)
+![](https://xunpizhangjj.coding.net/p/CodingImageURL/d/CodingImageURL/git/raw/master/PasswordStyle/%E4%B8%8B%E5%88%92%E7%BA%BF%E9%AB%98%E4%BA%AE%E5%AF%86%E6%96%87.png)
 
 * 矩形框明文样式,如下图:
-![](https://github.com/FreshManCode/ImageURL/blob/master/PasswordStyle/%E7%9F%A9%E5%BD%A2%E6%A1%86%E6%98%8E%E6%96%87%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81.png?raw=true)
+![](https://xunpizhangjj.coding.net/p/CodingImageURL/d/CodingImageURL/git/raw/master/PasswordStyle/%E7%9F%A9%E5%BD%A2%E6%A1%86%E6%98%8E%E6%96%87%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81.png)
 
 * 矩形框密文样式,如下图:
-![](https://github.com/FreshManCode/ImageURL/blob/master/PasswordStyle/%E7%9F%A9%E5%BD%A2%E6%A1%86%E5%AF%86%E6%96%87.png?raw=true)
+![](https://xunpizhangjj.coding.net/p/CodingImageURL/d/CodingImageURL/git/raw/master/PasswordStyle/%E7%9F%A9%E5%BD%A2%E6%A1%86%E5%AF%86%E6%96%87.png)
 
 
 输入到指定位数(目前设定的是6位,项目中有对应的回调,本例使用了Alert提示如下图:)
 
-![](https://github.com/FreshManCode/ImageURL/blob/master/PasswordStyle/%E7%9F%A9%E5%BD%A2%E6%A1%86%E5%AF%86%E6%96%87%E5%AF%86%E7%A0%81%E9%95%BF%E5%BA%A6%E8%BE%BE%E5%88%B06%E4%BD%8D.png?raw=true)
+![](https://xunpizhangjj.coding.net/p/CodingImageURL/d/CodingImageURL/git/raw/master/PasswordStyle/%E7%9F%A9%E5%BD%A2%E6%A1%86%E5%AF%86%E6%96%87%E5%AF%86%E7%A0%81%E9%95%BF%E5%BA%A6%E8%BE%BE%E5%88%B06%E4%BD%8D.png)
 
-![](https://github.com/FreshManCode/ImageURL/blob/master/PasswordStyle/%E7%9F%A9%E5%BD%A2%E6%A1%86%E6%98%8E%E6%96%876%E4%BD%8D%E5%AF%86%E7%A0%81.png?raw=true)
+![](https://xunpizhangjj.coding.net/p/CodingImageURL/d/CodingImageURL/git/raw/master/PasswordStyle/%E7%9F%A9%E5%BD%A2%E6%A1%86%E6%98%8E%E6%96%876%E4%BD%8D%E5%AF%86%E7%A0%81.png)
 
 * 输入密码之后,具有类似于支付宝提交支付密码的一个过渡提交动画.具体样式如下gif展示:
 
-![](https://github.com/FreshManCode/ZJPasswordStyle/blob/master/%E6%A0%B7%E5%BC%8F%E6%88%AA%E5%9B%BE/PasswordAnimated.gif?raw=true)
+![](https://xunpizhangjj.coding.net/p/CodingImageURL/d/CodingImageURL/git/raw/master/PasswordStyle/PasswordAnimated.gif)
 
 *注: *动画的实现参考了这篇博主的实现思路,起初我还以为是图片,后来看到了这个思路恍然大悟.原文的链接如下:[原文地址](https://blog.csdn.net/u013282507/article/details/70208141)
 

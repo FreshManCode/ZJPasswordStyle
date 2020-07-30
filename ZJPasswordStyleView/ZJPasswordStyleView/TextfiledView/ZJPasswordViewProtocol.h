@@ -99,6 +99,16 @@ typedef NS_ENUM(NSInteger,ZJPasswordViewEventType) {
             eventType:(ZJPasswordViewEventType)type;
 
 
+@optional
+
+/**
+ 点击了Textfiled
+ 
+ @param textfieldView 包含Textfield的view
+ */
+- (void)textfieldViewDidClicked:(UIView <ZJPasswordViewProtocol> *)textfieldView;
+
+
 
 @end
 

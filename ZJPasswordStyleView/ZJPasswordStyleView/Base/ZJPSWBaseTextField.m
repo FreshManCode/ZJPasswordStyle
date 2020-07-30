@@ -6,18 +6,18 @@
 //  Copyright © 2018年 ZhangJunJun. All rights reserved.
 //
 
-#import "ZJBaseTextField.h"
+#import "ZJPSWBaseTextField.h"
 #import "ZJKeyboardHelperView.h"
 
 
 @interface ZJTextFieldHelper : NSObject <UITextFieldDelegate>
-@property (nonatomic, strong) ZJBaseTextField *textField;
+@property (nonatomic, strong) ZJPSWBaseTextField *textField;
 
 @end
 
 @implementation ZJTextFieldHelper
 
-- (instancetype)initWithTextField:(ZJBaseTextField *)textField {
+- (instancetype)initWithTextField:(ZJPSWBaseTextField *)textField {
     if (self = [super init]) {
         self.textField = textField;
         self.textField.delegate = self;
@@ -28,12 +28,12 @@
 // MARK: - UITextFieldDelegate
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    id <UITextFieldDelegate > pDelegate =  [(ZJBaseTextField *)textField pDelegate];
+    id <UITextFieldDelegate > pDelegate =  [(ZJPSWBaseTextField *)textField pDelegate];
     if ([pDelegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
         [pDelegate textField:textField shouldChangeCharactersInRange:range replacementString:string];
     }
     
-    ZJBaseTextField *p_textField = (ZJBaseTextField *)textField;
+    ZJPSWBaseTextField *p_textField = (ZJPSWBaseTextField *)textField;
 //  判断是否达到设定的最大值
     if ([p_textField isReachMaxCountCharacterRange:range replacmentString:string ]) {
         return NO;
@@ -42,7 +42,7 @@
 }
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
-    id <UITextFieldDelegate>pDelegate = [(ZJBaseTextField *)textField pDelegate];
+    id <UITextFieldDelegate>pDelegate = [(ZJPSWBaseTextField *)textField pDelegate];
     if ([pDelegate respondsToSelector:@selector(textFieldShouldClear:)]) {
         return [pDelegate textFieldShouldClear:textField];
     }
@@ -50,7 +50,7 @@
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    id <UITextFieldDelegate>pDelegate = [(ZJBaseTextField *)textField pDelegate];
+    id <UITextFieldDelegate>pDelegate = [(ZJPSWBaseTextField *)textField pDelegate];
     if ([pDelegate respondsToSelector:@selector(textFieldShouldBeginEditing:)]) {
         return [pDelegate textFieldShouldBeginEditing:textField];
     }
@@ -58,7 +58,7 @@
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-    id <UITextFieldDelegate>pDelegate = [(ZJBaseTextField *)textField pDelegate];
+    id <UITextFieldDelegate>pDelegate = [(ZJPSWBaseTextField *)textField pDelegate];
     if ([pDelegate respondsToSelector:@selector(textFieldShouldEndEditing:)]) {
         return [pDelegate textFieldShouldEndEditing:textField];
     }
@@ -66,14 +66,14 @@
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    id<UITextFieldDelegate> pDelegate = ((ZJBaseTextField*)textField).pDelegate;
+    id<UITextFieldDelegate> pDelegate = ((ZJPSWBaseTextField*)textField).pDelegate;
     if([pDelegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
         [pDelegate textFieldDidBeginEditing:textField];
     }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    id<UITextFieldDelegate> pDelegate = ((ZJBaseTextField*)textField).pDelegate;
+    id<UITextFieldDelegate> pDelegate = ((ZJPSWBaseTextField*)textField).pDelegate;
     if([pDelegate respondsToSelector:@selector(textFieldShouldReturn:)]) {
         return [pDelegate textFieldShouldReturn:textField];
     }
@@ -83,7 +83,7 @@
 
 @end
 
-@interface ZJBaseTextField ()
+@interface ZJPSWBaseTextField ()
 
 @property (nonatomic, strong) ZJTextFieldHelper *fieldHelper;
 @property (nonatomic, strong) ZJKeyboardHelperView *helperView;
@@ -92,7 +92,7 @@
 @end
 
 
-@implementation ZJBaseTextField
+@implementation ZJPSWBaseTextField
 
 
 - (instancetype)init {

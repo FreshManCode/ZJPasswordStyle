@@ -6,10 +6,10 @@
 //  Copyright © 2019年 com.zhangjunjun.com. All rights reserved.
 //
 
-#import "ZJBaseView.h"
+#import "ZJPSWBaseView.h"
 
 
-@implementation ZJBaseView
+@implementation ZJPSWBaseView
 
 - (void)awakeFromNib {
     [super awakeFromNib];

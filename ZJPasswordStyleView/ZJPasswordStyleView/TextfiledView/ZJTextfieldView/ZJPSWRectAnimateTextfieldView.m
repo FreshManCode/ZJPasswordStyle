@@ -10,7 +10,7 @@
 
 #import "ZJPasswordDotView.h"
 #import "ZJMaskView.h"
-#import "ZJBaseTextField.h"
+#import "ZJPSWBaseTextField.h"
 #import "ZJPasswordViewProtocol.h"
 
 #import "ZJCircleAnimatedView.h"
@@ -21,7 +21,7 @@
 @property (nonatomic, strong) UILabel *titleLab;
 @property (nonatomic, strong) ZJPasswordDotView *dotView;
 @property (nonatomic, strong) ZJMaskView *maskView;
-@property (nonatomic, strong) ZJBaseTextField *textField;
+@property (nonatomic, strong) ZJPSWBaseTextField *textField;
 @property (nonatomic, strong) NSMutableArray <ZJPasswordDotView *> *dotViews;
 
 @property (nonatomic, strong) ZJCircleAnimatedView *circleAnimatedView;
@@ -39,7 +39,7 @@
     [self addSubview:self.titleLab];
     [self.titleLab setText:@"请输入密码"];
     
-    _textField = [ZJBaseTextField new];
+    _textField = [ZJPSWBaseTextField new];
     _textField.textColor = [UIColor whiteColor];
     _textField.tintColor = [UIColor whiteColor];
     _textField.secureTextEntry = true;

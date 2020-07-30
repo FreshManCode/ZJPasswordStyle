@@ -6,11 +6,11 @@
 //  Copyright © 2019年 com.zhangjunjun.com. All rights reserved.
 //
 
-#import "ZJBaseView.h"
+#import "ZJPSWBaseView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZJKeyboardHelperView : ZJBaseView
+@interface ZJKeyboardHelperView : ZJPSWBaseView
 
 + (instancetype)createHelerViewWithFrame:(CGRect)frame
                          keyboardDismiss:(void(^)(void))dismiss;

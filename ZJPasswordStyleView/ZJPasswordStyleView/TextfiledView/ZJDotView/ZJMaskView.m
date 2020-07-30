@@ -10,13 +10,25 @@
 
 @implementation ZJMaskView
 
+- (void)setDelegate:(id<ZJMaskViewDelegate>)delegate {
+    _delegate = delegate;
+    _DelegateFlags.ClickMaskView = [_delegate respondsToSelector:@selector(maskViewDidClick:)];
+}
+
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     static BOOL first = true;
     UIView *hitView = [super hitTest:point withEvent:event];
     if (hitView == self) {
+        if (first) {
+            first = NO;
+            if (_DelegateFlags.ClickMaskView) {
+                [_delegate maskViewDidClick:self];
+            }
+        }
         return nil;
     }
     return hitView;
 }
+
 
 @end
