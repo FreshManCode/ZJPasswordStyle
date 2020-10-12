@@ -4,7 +4,7 @@
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
+#  pod trunk push ZJPasswordStyle.podspec --use-libraries --allow-warnings
 
 Pod::Spec.new do |spec|
 
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZJPasswordStyle"
-  spec.version      = "1.2.1"
+  spec.version      = "1.2.2"
   spec.summary      = "常用的密码输入框样式"
 
   # This description is used to generate tags and improve search results.
@@ -85,7 +85,9 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "ZJPasswordStyleView/ZJPasswordFile/**/*"
+  spec.source_files  = "ZJPasswordStyleView/ZJPasswordFile/Base/*"
+  spec.source_files  = "ZJPasswordStyleView/ZJPasswordFile/Lib/**/*"
+  spec.source_files  = "ZJPasswordStyleView/ZJPasswordFile/TextfiledView/*"
 
   #spec.exclude_files = "Classes/Exclude"
 
