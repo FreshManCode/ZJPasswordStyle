@@ -16,7 +16,6 @@
 		DFD733BB22C06E81002F1476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD733BA22C06E81002F1476 /* AppDelegate.m */; };
 		DFD733BE22C06E81002F1476 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD733BD22C06E81002F1476 /* ViewController.m */; };
 		DFD733C122C06E81002F1476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD733BF22C06E81002F1476 /* Main.storyboard */; };
-		DFD733C422C06E81002F1476 /* ZJPasswordStyleView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFD733C222C06E81002F1476 /* ZJPasswordStyleView.xcdatamodeld */; };
 		DFD733C622C06E82002F1476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD733C522C06E82002F1476 /* Assets.xcassets */; };
 		DFD733C922C06E82002F1476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD733C722C06E82002F1476 /* LaunchScreen.storyboard */; };
 		DFD733CC22C06E82002F1476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD733CB22C06E82002F1476 /* main.m */; };
@@ -57,6 +56,7 @@
 		DFA43A9825342A78008BEF3D /* ZJPasswordStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJPasswordStyleViewController.m; sourceTree = "<group>"; };
 		DFA43A9925342A78008BEF3D /* ZJPasswordStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJPasswordStyleViewController.h; sourceTree = "<group>"; };
 		DFA43A9A25342A78008BEF3D /* ZJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJModel.h; sourceTree = "<group>"; };
+		DFA43AA0253447D8008BEF3D /* ZJPasswordViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJPasswordViewHeader.h; sourceTree = "<group>"; };
 		DFD7036324879DCA008DE791 /* ZJUIHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJUIHeader.h; sourceTree = "<group>"; };
 		DFD703B82487ADB9008DE791 /* ZJPSWRectEncryptView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJPSWRectEncryptView.h; sourceTree = "<group>"; };
 		DFD703B92487ADB9008DE791 /* ZJPSWRectEncryptView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJPSWRectEncryptView.m; sourceTree = "<group>"; };
@@ -66,7 +66,6 @@
 		DFD733BC22C06E81002F1476 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DFD733BD22C06E81002F1476 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DFD733C022C06E81002F1476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DFD733C322C06E81002F1476 /* ZJPasswordStyleView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZJPasswordStyleView.xcdatamodel; sourceTree = "<group>"; };
 		DFD733C522C06E82002F1476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFD733C822C06E82002F1476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFD733CA22C06E82002F1476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,10 +151,10 @@
 		DFA43A9625342A78008BEF3D /* TestViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DFA43A9725342A78008BEF3D /* ZJModel.m */,
-				DFA43A9825342A78008BEF3D /* ZJPasswordStyleViewController.m */,
-				DFA43A9925342A78008BEF3D /* ZJPasswordStyleViewController.h */,
 				DFA43A9A25342A78008BEF3D /* ZJModel.h */,
+				DFA43A9725342A78008BEF3D /* ZJModel.m */,
+				DFA43A9925342A78008BEF3D /* ZJPasswordStyleViewController.h */,
+				DFA43A9825342A78008BEF3D /* ZJPasswordStyleViewController.m */,
 			);
 			path = TestViewController;
 			sourceTree = "<group>";
@@ -200,7 +199,6 @@
 				DFD733C722C06E82002F1476 /* LaunchScreen.storyboard */,
 				DFD733CA22C06E82002F1476 /* Info.plist */,
 				DFD733CB22C06E82002F1476 /* main.m */,
-				DFD733C222C06E81002F1476 /* ZJPasswordStyleView.xcdatamodeld */,
 			);
 			path = ZJPasswordStyleView;
 			sourceTree = "<group>";
@@ -214,6 +212,7 @@
 				DFD733E122C06ED7002F1476 /* ZJDotView */,
 				DFD733EE22C06ED7002F1476 /* ZJPasswordViewProtocol.h */,
 				DFD733EF22C06ED7002F1476 /* ZJTextfieldView */,
+				DFA43AA0253447D8008BEF3D /* ZJPasswordViewHeader.h */,
 			);
 			path = TextfiledView;
 			sourceTree = "<group>";
@@ -282,30 +281,30 @@
 			isa = PBXGroup;
 			children = (
 				DFD7340822C06F48002F1476 /* MASCompositeConstraint.h */,
-				DFD7340922C06F48002F1476 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				DFD7341622C06F48002F1476 /* MASCompositeConstraint.m */,
+				DFD7341422C06F48002F1476 /* MASConstraint.h */,
+				DFD7341D22C06F48002F1476 /* MASConstraint.m */,
 				DFD7340A22C06F48002F1476 /* MASConstraint+Private.h */,
-				DFD7340B22C06F48002F1476 /* MASLayoutConstraint.h */,
-				DFD7340C22C06F48002F1476 /* NSArray+MASShorthandAdditions.h */,
 				DFD7340D22C06F48002F1476 /* MASConstraintMaker.h */,
-				DFD7340E22C06F48002F1476 /* View+MASAdditions.h */,
-				DFD7340F22C06F48002F1476 /* NSArray+MASAdditions.h */,
+				DFD7341722C06F48002F1476 /* MASConstraintMaker.m */,
+				DFD7340B22C06F48002F1476 /* MASLayoutConstraint.h */,
+				DFD7341822C06F48002F1476 /* MASLayoutConstraint.m */,
+				DFD7341C22C06F48002F1476 /* Masonry.h */,
 				DFD7341022C06F48002F1476 /* MASUtilities.h */,
 				DFD7341122C06F48002F1476 /* MASViewAttribute.h */,
-				DFD7341222C06F48002F1476 /* ViewController+MASAdditions.m */,
+				DFD7342022C06F48002F1476 /* MASViewAttribute.m */,
 				DFD7341322C06F48002F1476 /* MASViewConstraint.h */,
-				DFD7341422C06F48002F1476 /* MASConstraint.h */,
-				DFD7341522C06F48002F1476 /* NSLayoutConstraint+MASDebugAdditions.h */,
-				DFD7341622C06F48002F1476 /* MASCompositeConstraint.m */,
-				DFD7341722C06F48002F1476 /* MASConstraintMaker.m */,
-				DFD7341822C06F48002F1476 /* MASLayoutConstraint.m */,
+				DFD7341F22C06F48002F1476 /* MASViewConstraint.m */,
+				DFD7340F22C06F48002F1476 /* NSArray+MASAdditions.h */,
 				DFD7341922C06F48002F1476 /* NSArray+MASAdditions.m */,
+				DFD7340C22C06F48002F1476 /* NSArray+MASShorthandAdditions.h */,
+				DFD7341522C06F48002F1476 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				DFD7340922C06F48002F1476 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				DFD7340E22C06F48002F1476 /* View+MASAdditions.h */,
 				DFD7341A22C06F48002F1476 /* View+MASAdditions.m */,
 				DFD7341B22C06F48002F1476 /* View+MASShorthandAdditions.h */,
-				DFD7341C22C06F48002F1476 /* Masonry.h */,
-				DFD7341D22C06F48002F1476 /* MASConstraint.m */,
 				DFD7341E22C06F48002F1476 /* ViewController+MASAdditions.h */,
-				DFD7341F22C06F48002F1476 /* MASViewConstraint.m */,
-				DFD7342022C06F48002F1476 /* MASViewAttribute.m */,
+				DFD7341222C06F48002F1476 /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
 			sourceTree = "<group>";
@@ -410,7 +409,6 @@
 				DF01C87B22CDEAD000CDD1EF /* ZJPSWRectAnimateTextfieldView.m in Sources */,
 				DFD7342422C06F48002F1476 /* MASConstraintMaker.m in Sources */,
 				DFD7340322C06ED7002F1476 /* ZJPSWLineEncryptTextfiledView.m in Sources */,
-				DFD733C422C06E81002F1476 /* ZJPasswordStyleView.xcdatamodeld in Sources */,
 				DFD7343422C0727E002F1476 /* ZJKeyboardHelperView.m in Sources */,
 				DFD7342222C06F48002F1476 /* ViewController+MASAdditions.m in Sources */,
 				DFD733FE22C06ED7002F1476 /* ZJMaskView.m in Sources */,
@@ -611,19 +609,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DFD733C222C06E81002F1476 /* ZJPasswordStyleView.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DFD733C322C06E81002F1476 /* ZJPasswordStyleView.xcdatamodel */,
-			);
-			currentVersion = DFD733C322C06E81002F1476 /* ZJPasswordStyleView.xcdatamodel */;
-			path = ZJPasswordStyleView.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DFD733AE22C06E81002F1476 /* Project object */;
 }
