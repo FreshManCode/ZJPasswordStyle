@@ -18,7 +18,6 @@
 		DFD733C622C06E82002F1476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD733C522C06E82002F1476 /* Assets.xcassets */; };
 		DFD733C922C06E82002F1476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD733C722C06E82002F1476 /* LaunchScreen.storyboard */; };
 		DFD733CC22C06E82002F1476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD733CB22C06E82002F1476 /* main.m */; };
-		DFD733D622C06E82002F1476 /* ZJPasswordStyleViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD733D522C06E82002F1476 /* ZJPasswordStyleViewUITests.m */; };
 		DFD733FA22C06ED7002F1476 /* ZJPSWRectDotEncryptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD733E222C06ED7002F1476 /* ZJPSWRectDotEncryptionView.m */; };
 		DFD733FB22C06ED7002F1476 /* ZJPSWLineDotEncryptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD733E422C06ED7002F1476 /* ZJPSWLineDotEncryptionView.m */; };
 		DFD733FC22C06ED7002F1476 /* ZJPasswordDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD733E622C06ED7002F1476 /* ZJPasswordDotView.m */; };
@@ -47,16 +46,6 @@
 		DFD7343A22C09EDE002F1476 /* ZJPasswordStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD7343922C09EDE002F1476 /* ZJPasswordStyleViewController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		DFD733D222C06E82002F1476 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DFD733AE22C06E81002F1476 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DFD733B522C06E81002F1476;
-			remoteInfo = ZJPasswordStyleView;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		DF01C86C22CD8F7300CDD1EF /* ZJCircleAnimatedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJCircleAnimatedView.h; sourceTree = "<group>"; };
 		DF01C86D22CD8F7300CDD1EF /* ZJCircleAnimatedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJCircleAnimatedView.m; sourceTree = "<group>"; };
@@ -78,9 +67,6 @@
 		DFD733C822C06E82002F1476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFD733CA22C06E82002F1476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFD733CB22C06E82002F1476 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DFD733D122C06E82002F1476 /* ZJPasswordStyleViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZJPasswordStyleViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFD733D522C06E82002F1476 /* ZJPasswordStyleViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJPasswordStyleViewUITests.m; sourceTree = "<group>"; };
-		DFD733D722C06E82002F1476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFD733E222C06ED7002F1476 /* ZJPSWRectDotEncryptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJPSWRectDotEncryptionView.m; sourceTree = "<group>"; };
 		DFD733E322C06ED7002F1476 /* ZJMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJMaskView.h; sourceTree = "<group>"; };
 		DFD733E422C06ED7002F1476 /* ZJPSWLineDotEncryptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJPSWLineDotEncryptionView.m; sourceTree = "<group>"; };
@@ -149,13 +135,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFD733CE22C06E82002F1476 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -183,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				DFD733B822C06E81002F1476 /* ZJPasswordStyleView */,
-				DFD733D422C06E82002F1476 /* ZJPasswordStyleViewUITests */,
 				DFD733B722C06E81002F1476 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -192,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				DFD733B622C06E81002F1476 /* ZJPasswordStyleView.app */,
-				DFD733D122C06E82002F1476 /* ZJPasswordStyleViewUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,15 +196,6 @@
 				DFD733C222C06E81002F1476 /* ZJPasswordStyleView.xcdatamodeld */,
 			);
 			path = ZJPasswordStyleView;
-			sourceTree = "<group>";
-		};
-		DFD733D422C06E82002F1476 /* ZJPasswordStyleViewUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DFD733D522C06E82002F1476 /* ZJPasswordStyleViewUITests.m */,
-				DFD733D722C06E82002F1476 /* Info.plist */,
-			);
-			path = ZJPasswordStyleViewUITests;
 			sourceTree = "<group>";
 		};
 		DFD733E022C06ED7002F1476 /* TextfiledView */ = {
@@ -354,24 +322,6 @@
 			productReference = DFD733B622C06E81002F1476 /* ZJPasswordStyleView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DFD733D022C06E82002F1476 /* ZJPasswordStyleViewUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DFD733DD22C06E82002F1476 /* Build configuration list for PBXNativeTarget "ZJPasswordStyleViewUITests" */;
-			buildPhases = (
-				DFD733CD22C06E82002F1476 /* Sources */,
-				DFD733CE22C06E82002F1476 /* Frameworks */,
-				DFD733CF22C06E82002F1476 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DFD733D322C06E82002F1476 /* PBXTargetDependency */,
-			);
-			name = ZJPasswordStyleViewUITests;
-			productName = ZJPasswordStyleViewUITests;
-			productReference = DFD733D122C06E82002F1476 /* ZJPasswordStyleViewUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -383,10 +333,6 @@
 				TargetAttributes = {
 					DFD733B522C06E81002F1476 = {
 						CreatedOnToolsVersion = 10.0;
-					};
-					DFD733D022C06E82002F1476 = {
-						CreatedOnToolsVersion = 10.0;
-						TestTargetID = DFD733B522C06E81002F1476;
 					};
 				};
 			};
@@ -404,7 +350,6 @@
 			projectRoot = "";
 			targets = (
 				DFD733B522C06E81002F1476 /* ZJPasswordStyleView */,
-				DFD733D022C06E82002F1476 /* ZJPasswordStyleViewUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -417,13 +362,6 @@
 				DFD733C922C06E82002F1476 /* LaunchScreen.storyboard in Resources */,
 				DFD733C622C06E82002F1476 /* Assets.xcassets in Resources */,
 				DFD733C122C06E81002F1476 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DFD733CF22C06E82002F1476 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,23 +409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFD733CD22C06E82002F1476 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DFD733D622C06E82002F1476 /* ZJPasswordStyleViewUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DFD733D322C06E82002F1476 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DFD733B522C06E81002F1476 /* ZJPasswordStyleView */;
-			targetProxy = DFD733D222C06E82002F1476 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DFD733BF22C06E81002F1476 /* Main.storyboard */ = {
@@ -659,40 +581,6 @@
 			};
 			name = Release;
 		};
-		DFD733DE22C06E82002F1476 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ZJPasswordStyleViewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhangjunjun.com.ZJPasswordStyleViewUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ZJPasswordStyleView;
-			};
-			name = Debug;
-		};
-		DFD733DF22C06E82002F1476 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ZJPasswordStyleViewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhangjunjun.com.ZJPasswordStyleViewUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ZJPasswordStyleView;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -710,15 +598,6 @@
 			buildConfigurations = (
 				DFD733DB22C06E82002F1476 /* Debug */,
 				DFD733DC22C06E82002F1476 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DFD733DD22C06E82002F1476 /* Build configuration list for PBXNativeTarget "ZJPasswordStyleViewUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DFD733DE22C06E82002F1476 /* Debug */,
-				DFD733DF22C06E82002F1476 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
