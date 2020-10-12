@@ -16,18 +16,18 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZJPasswordStyle"
-  spec.version      = "1.0.0"
-  spec.summary      = "Custom PasswordStyle"
+  spec.version      = "1.1.0"
+  spec.summary      = "常用的密码输入框样式"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = "PasswordStyle"
+  spec.description  = "用于平时开发过程中用到的密码输入框的样式问题,本案例提供了四中样式,案例中有些写法使用了继承有些使用了协议,如有需要可以自行修改或者再次封装处理"
 
   spec.homepage     = "https://github.com/FreshManCode/ZJPasswordStyle"
-  # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  spec.screenshots  = "https://xunpizhangjj.coding.net/p/CodingImageURL/d/CodingImageURL/git/raw/master/PasswordStyle/PasswordAnimated.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -85,7 +85,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "ZJPasswordStyleView/**/*.{h,m}"
+  spec.source_files  = "ZJPasswordStyleView/ZJPasswordStyleView/TextfiledView/*"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "ZJPasswordStyleView/**/*.{h.m}"
