@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZJPasswordStyle"
-  spec.version      = "1.2.0"
+  spec.version      = "1.2.1"
   spec.summary      = "常用的密码输入框样式"
 
   # This description is used to generate tags and improve search results.
@@ -85,10 +85,13 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "ZJPasswordStyleView/ZJPasswordStyleView/{Base,Lib,TextfiledView}/**/*"
+  spec.source_files  = "ZJPasswordStyleView/ZJPasswordFile/**/*"
+
   #spec.exclude_files = "Classes/Exclude"
 
-  spec.public_header_files = "ZJPasswordStyleView/ZJPasswordStyleView/TextfiledView/{.h,**}/.h"
+  #spec.public_header_files = "ZJPasswordStyleView/ZJPasswordStyleView/Base/*.h"
+  #spec.public_header_files = "ZJPasswordStyleView/ZJPasswordStyleView/TextfiledView/**/*.h"
+
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
