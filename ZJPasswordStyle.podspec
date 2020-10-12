@@ -85,9 +85,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "ZJPasswordStyleView/ZJPasswordFile/Base/*"
-  spec.source_files  = "ZJPasswordStyleView/ZJPasswordFile/Lib/**/*"
-  spec.source_files  = "ZJPasswordStyleView/ZJPasswordFile/TextfiledView/*"
+  spec.source_files  = "ZJPasswordStyleView/ZJPasswordFile/Base/*","ZJPasswordStyleView/ZJPasswordFile/Lib/**/*","ZJPasswordStyleView/ZJPasswordFile/TextfiledView/*.{h,m}","ZJPasswordStyleView/ZJPasswordFile/TextfiledView/**/*"
+ 
 
   #spec.exclude_files = "Classes/Exclude"
 
