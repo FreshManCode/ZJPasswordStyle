@@ -13,6 +13,11 @@
 
 @property (nonatomic,weak) id <UITextFieldDelegate> pDelegate;
 @property (nonatomic, assign) NSInteger maxCount;
+/// 是否过滤空格,默认为true
+@property (nonatomic, assign) BOOL filterSpace;
+
+/// 输入框内容发生了变化回调
+@property (nonatomic,copy) void (^TextFieldDidChange)(UITextField *textField);
 
 /**
  是否允许长按弹出 Copy等相关选择框 (YES/NO)

@@ -46,11 +46,14 @@
     _textField.maxCount  = kMaxCount;
     _textField.allowCopyMenu = false;
     _textField.keyboardType = UIKeyboardTypeNumberPad;
-    [_textField addTarget:self action:@selector(textfieldDidChanged:) forControlEvents:UIControlEventEditingChanged];
     __weak typeof(self) weakSelf     = self;
     _textField.showToolbarView = true;
     _textField.ToolBarViewEvent = ^{
         [weakSelf callOkButtonFunnctionWithText:weakSelf.textField.text];
+    };
+    
+    _textField.TextFieldDidChange = ^(UITextField *textField) {
+        [weakSelf updateInputNumWithText:textField.text];
     };
     
     [self addSubview:_textField];
@@ -128,9 +131,6 @@
     [self addSubview:self.successCheckView];
 }
 
-- (void)textfieldDidChanged:(UITextField *)textfiled {
-    [self updateInputNumWithText:textfiled.text];
-}
 
 - (void)updateInputNumWithText:(NSString *)text {
     NSInteger length = text.length;

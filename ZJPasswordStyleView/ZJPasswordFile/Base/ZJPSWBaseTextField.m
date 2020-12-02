@@ -8,7 +8,7 @@
 
 #import "ZJPSWBaseTextField.h"
 #import "ZJKeyboardHelperView.h"
-
+#import "NSString+ZJTools.h"
 
 @interface ZJTextFieldHelper : NSObject <UITextFieldDelegate>
 @property (nonatomic, strong) ZJPSWBaseTextField *textField;
@@ -97,7 +97,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        
+        [self p_defaultInit];
     }
     return self;
 }
@@ -111,6 +111,7 @@
     [self addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
     _maxCount = 0;
     _fieldHelper = [[ZJTextFieldHelper alloc] initWithTextField:self];
+    self.filterSpace = true;
 }
 
 - (void)setShowToolbarView:(BOOL)showToolbarView {
@@ -131,7 +132,15 @@
 }
 
 - (void)textFieldChanged:(UITextField *)textField {
-    
+    __weak typeof(textField) weakTextField = textField;
+    if (self.filterSpace) {
+        NSString *tempText = textField.text;
+        if ([tempText containsString:@" "]) {
+            tempText = [tempText filterSpaceChar];
+            textField.text = tempText;
+        }
+    }
+    !self.TextFieldDidChange? : self.TextFieldDidChange(weakTextField);
 }
 
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {

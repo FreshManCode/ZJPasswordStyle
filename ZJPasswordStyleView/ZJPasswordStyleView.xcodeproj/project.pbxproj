@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0BF23025776944005B9563 /* NSString+ZJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0BF22F25776944005B9563 /* NSString+ZJTools.m */; };
 		DFA43AF1253453B6008BEF3D /* ZJPSWRectEncryptView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA43AA6253453B6008BEF3D /* ZJPSWRectEncryptView.m */; };
 		DFA43AF2253453B6008BEF3D /* ZJModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA43AA9253453B6008BEF3D /* ZJModel.m */; };
 		DFA43AF3253453B6008BEF3D /* ZJPasswordStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA43AAA253453B6008BEF3D /* ZJPasswordStyleViewController.m */; };
@@ -46,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF0BF22E25776944005B9563 /* NSString+ZJTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ZJTools.h"; sourceTree = "<group>"; };
+		DF0BF22F25776944005B9563 /* NSString+ZJTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZJTools.m"; sourceTree = "<group>"; };
 		DFA43AA6253453B6008BEF3D /* ZJPSWRectEncryptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJPSWRectEncryptView.m; sourceTree = "<group>"; };
 		DFA43AA7253453B6008BEF3D /* ZJPSWRectEncryptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJPSWRectEncryptView.h; sourceTree = "<group>"; };
 		DFA43AA9253453B6008BEF3D /* ZJModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJModel.m; sourceTree = "<group>"; };
@@ -137,6 +140,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF0BF22D2577692D005B9563 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DF0BF22E25776944005B9563 /* NSString+ZJTools.h */,
+				DF0BF22F25776944005B9563 /* NSString+ZJTools.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		DFA43AA3253453B6008BEF3D /* ZJPasswordFile */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,12 +162,12 @@
 		DFA43AA4253453B6008BEF3D /* TextfiledView */ = {
 			isa = PBXGroup;
 			children = (
-				DFA43AA5253453B6008BEF3D /* TextfiledViewElement */,
-				DFA43AA8253453B6008BEF3D /* TestViewController */,
-				DFA43AAD253453B6008BEF3D /* ZJPasswordViewHeader.h */,
-				DFA43AAE253453B6008BEF3D /* ZJDotView */,
-				DFA43ABB253453B6008BEF3D /* ZJPasswordViewProtocol.h */,
 				DFA43ABC253453B6008BEF3D /* AnimatedView */,
+				DFA43AA8253453B6008BEF3D /* TestViewController */,
+				DFA43AA5253453B6008BEF3D /* TextfiledViewElement */,
+				DFA43AAE253453B6008BEF3D /* ZJDotView */,
+				DFA43AAD253453B6008BEF3D /* ZJPasswordViewHeader.h */,
+				DFA43ABB253453B6008BEF3D /* ZJPasswordViewProtocol.h */,
 				DFA43AC1253453B6008BEF3D /* ZJTextfieldView */,
 			);
 			path = TextfiledView;
@@ -164,8 +176,8 @@
 		DFA43AA5253453B6008BEF3D /* TextfiledViewElement */ = {
 			isa = PBXGroup;
 			children = (
-				DFA43AA6253453B6008BEF3D /* ZJPSWRectEncryptView.m */,
 				DFA43AA7253453B6008BEF3D /* ZJPSWRectEncryptView.h */,
+				DFA43AA6253453B6008BEF3D /* ZJPSWRectEncryptView.m */,
 			);
 			path = TextfiledViewElement;
 			sourceTree = "<group>";
@@ -214,18 +226,18 @@
 		DFA43AC1253453B6008BEF3D /* ZJTextfieldView */ = {
 			isa = PBXGroup;
 			children = (
-				DFA43AC2253453B6008BEF3D /* ZJPSWTextfieldContext.m */,
-				DFA43AC3253453B6008BEF3D /* ZJPSWRectAnimateTextfieldView.m */,
-				DFA43AC4253453B6008BEF3D /* ZJPSWRectNormalTextfieldView.m */,
-				DFA43AC5253453B6008BEF3D /* ZJPSWRectEncryptTextfiledView.h */,
-				DFA43AC6253453B6008BEF3D /* ZJPSWLineNormalTextfiledView.m */,
-				DFA43AC7253453B6008BEF3D /* ZJPSWLineEncryptTextfiledView.m */,
-				DFA43AC8253453B6008BEF3D /* ZJPSWTextfieldContext.h */,
-				DFA43AC9253453B6008BEF3D /* ZJPSWRectNormalTextfieldView.h */,
-				DFA43ACA253453B6008BEF3D /* ZJPSWRectAnimateTextfieldView.h */,
 				DFA43ACB253453B6008BEF3D /* ZJPSWLineEncryptTextfiledView.h */,
+				DFA43AC7253453B6008BEF3D /* ZJPSWLineEncryptTextfiledView.m */,
 				DFA43ACC253453B6008BEF3D /* ZJPSWLineNormalTextfiledView.h */,
+				DFA43AC6253453B6008BEF3D /* ZJPSWLineNormalTextfiledView.m */,
+				DFA43ACA253453B6008BEF3D /* ZJPSWRectAnimateTextfieldView.h */,
+				DFA43AC3253453B6008BEF3D /* ZJPSWRectAnimateTextfieldView.m */,
+				DFA43AC5253453B6008BEF3D /* ZJPSWRectEncryptTextfiledView.h */,
 				DFA43ACD253453B6008BEF3D /* ZJPSWRectEncryptTextfiledView.m */,
+				DFA43AC9253453B6008BEF3D /* ZJPSWRectNormalTextfieldView.h */,
+				DFA43AC4253453B6008BEF3D /* ZJPSWRectNormalTextfieldView.m */,
+				DFA43AC8253453B6008BEF3D /* ZJPSWTextfieldContext.h */,
+				DFA43AC2253453B6008BEF3D /* ZJPSWTextfieldContext.m */,
 			);
 			path = ZJTextfieldView;
 			sourceTree = "<group>";
@@ -233,6 +245,7 @@
 		DFA43ACE253453B6008BEF3D /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				DF0BF22D2577692D005B9563 /* Category */,
 				DFA43ACF253453B6008BEF3D /* Masonry */,
 			);
 			path = Lib;
@@ -274,12 +287,12 @@
 			isa = PBXGroup;
 			children = (
 				DFA43AEA253453B6008BEF3D /* ZJKeyboardHelperView.h */,
-				DFA43AEB253453B6008BEF3D /* ZJPSWBaseView.h */,
-				DFA43AEC253453B6008BEF3D /* ZJPSWBaseTextField.m */,
-				DFA43AED253453B6008BEF3D /* ZJPSWBaseView.m */,
 				DFA43AEE253453B6008BEF3D /* ZJKeyboardHelperView.m */,
-				DFA43AEF253453B6008BEF3D /* ZJUIHeader.h */,
 				DFA43AF0253453B6008BEF3D /* ZJPSWBaseTextField.h */,
+				DFA43AEC253453B6008BEF3D /* ZJPSWBaseTextField.m */,
+				DFA43AEB253453B6008BEF3D /* ZJPSWBaseView.h */,
+				DFA43AED253453B6008BEF3D /* ZJPSWBaseView.m */,
+				DFA43AEF253453B6008BEF3D /* ZJUIHeader.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -388,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFA43B0A253453B6008BEF3D /* MASViewConstraint.m in Sources */,
+				DF0BF23025776944005B9563 /* NSString+ZJTools.m in Sources */,
 				DFA43AFE253453B6008BEF3D /* ZJPSWRectNormalTextfieldView.m in Sources */,
 				DFA43B04253453B6008BEF3D /* MASCompositeConstraint.m in Sources */,
 				DFA43B07253453B6008BEF3D /* NSArray+MASAdditions.m in Sources */,
@@ -562,16 +576,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = SUAKKZNX2F;
+				CURRENT_PROJECT_VERSION = 1.2.5;
+				DEVELOPMENT_TEAM = 22L8F5N2ZA;
 				INFOPLIST_FILE = ZJPasswordStyleView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangjunjun.com.ZJPasswordStyleView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = AllUniversalAppProvision;
+				PROVISIONING_PROFILE_SPECIFIER = WexWalletUniversal;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -581,16 +597,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = SUAKKZNX2F;
+				CURRENT_PROJECT_VERSION = 1.2.5;
+				DEVELOPMENT_TEAM = 22L8F5N2ZA;
 				INFOPLIST_FILE = ZJPasswordStyleView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangjunjun.com.ZJPasswordStyleView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = AllUniversalAppProvision;
+				PROVISIONING_PROFILE_SPECIFIER = WexWalletUniversal;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

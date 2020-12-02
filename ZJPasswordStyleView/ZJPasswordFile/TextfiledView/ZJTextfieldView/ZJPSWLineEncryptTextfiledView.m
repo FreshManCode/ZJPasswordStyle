@@ -28,7 +28,8 @@
 @synthesize delegate = _delegate;
 
 - (void)zj_addSubviews {
-    
+    __weak typeof(self) weakSelf     = self;
+
     self.titleLab = CreateCenterAlignmentLabel(Font(16.f), ZJColorWithHex(0x333333));
     [self addSubview:self.titleLab];
     [self.titleLab setText:@"请输入密码"];
@@ -39,9 +40,10 @@
     _textField.maxCount  = kMaxCount;
     _textField.allowCopyMenu = false;
     _textField.keyboardType = UIKeyboardTypeNumberPad;
-    [_textField addTarget:self action:@selector(textfieldDidChanged:) forControlEvents:UIControlEventEditingChanged];
+    _textField.TextFieldDidChange = ^(UITextField *textField) {
+        [weakSelf updateInputNumWithText:textField.text];
+    };
     
-    __weak typeof(self) weakSelf     = self;
     _textField.showToolbarView = true;
     _textField.ToolBarViewEvent = ^{
         [weakSelf callOkButtonFunnctionWithText:weakSelf.textField.text];
@@ -88,10 +90,6 @@
         [self.dotViews  addObject:dotView];
     }
     [self updateInputNumWithText:_textField.text];
-}
-
-- (void)textfieldDidChanged:(UITextField *)textfiled {
-    [self updateInputNumWithText:textfiled.text];
 }
 
 - (void)updateInputNumWithText:(NSString *)text {
