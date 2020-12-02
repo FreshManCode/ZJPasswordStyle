@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZJPasswordStyle"
-  spec.version      = "1.2.4"
+  spec.version      = "1.2.5"
   spec.summary      = "常用的密码输入框样式"
 
   # This description is used to generate tags and improve search results.
